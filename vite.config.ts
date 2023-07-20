@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-18 16:20:55
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-19 17:02:50
+ * @LastEditTime: 2023-07-20 16:25:39
  */
 import { fileURLToPath, URL } from 'node:url'
 
@@ -84,7 +84,7 @@ export default defineConfig(({ mode }) => {
       }),
       Components({
         //imports指定组件所在的目录，默认src/components
-        dirs: ['src/components/', 'src/views/'],
+        dirs: ['src/components/', 'src/views/','src/layout/'],
         //需要解析的文件
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         //解析器

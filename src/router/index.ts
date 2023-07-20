@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-18 16:20:55
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-18 16:36:01
+ * @LastEditTime: 2023-07-20 16:30:22
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -13,8 +13,19 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'HomePage',
-      component: () => import('@/views/HomePage.vue')
+      name: 'Layout',
+      component: () => import('@/layout/SwitchIndex.vue'),
+      redirect: '/',
+      children: [
+        {
+          path: '/',
+          name: 'HomePage',
+          meta:{
+            title:'TOOLSDOG'
+          },
+          component: () => import('@/views/HomePage.vue')
+        }
+      ]
     }
   ]
 })

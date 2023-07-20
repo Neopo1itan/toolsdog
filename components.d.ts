@@ -7,9 +7,15 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AAffix: typeof import('@arco-design/web-vue')['Affix']
     AButton: typeof import('@arco-design/web-vue')['Button']
+    ALayout: typeof import('@arco-design/web-vue')['Layout']
+    ALayoutContent: typeof import('@arco-design/web-vue')['LayoutContent']
+    ALayoutFooter: typeof import('@arco-design/web-vue')['LayoutFooter']
+    ALayoutHeader: typeof import('@arco-design/web-vue')['LayoutHeader']
     ASpace: typeof import('@arco-design/web-vue')['Space']
     ATooltip: typeof import('@arco-design/web-vue')['Tooltip']
+    DefaultLayout: typeof import('./src/layout/switch/DefaultLayout.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HomePage: typeof import('./src/views/HomePage.vue')['default']
     IconEpAlarmClock: typeof import('~icons/ep/alarm-clock')['default']
@@ -17,5 +23,7 @@ declare module 'vue' {
     IconUserPresent: typeof import('~icons/user/present')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SidebarLayout: typeof import('./src/layout/switch/SidebarLayout.vue')['default']
+    SwitchIndex: typeof import('./src/layout/SwitchIndex.vue')['default']
   }
 }
