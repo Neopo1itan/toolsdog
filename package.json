@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vite --mode development",
-    "build":"vite build --mode production",
-    "preview":"vite preview --port 8081",
-    "lint":"eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "build": "vite build --mode production",
+    "preview": "vite preview --port 8081",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@vueuse/core": "^10.2.1",
@@ -17,6 +17,8 @@
   "devDependencies": {
     "@arco-design/web-vue": "^2.48.1",
     "@iconify-json/ep": "^1.1.11",
+    "@iconify-json/mdi": "^1.1.53",
+    "@iconify-json/ri": "^1.1.10",
     "@rushstack/eslint-patch": "^1.2.0",
     "@tsconfig/node18": "^2.0.1",
     "@types/node": "^18.16.17",

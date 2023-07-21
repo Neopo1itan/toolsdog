@@ -2,7 +2,7 @@
  * @LastEditors: 雷宇琦
  * @Description: 全局config配置文件
  * @Date: 2022-09-17 14:35:02
- * @LastEditTime: 2023-07-19 17:08:55
+ * @LastEditTime: 2023-07-21 16:21:19
  * @Author: isboyjc
  */
 
@@ -26,7 +26,9 @@ const configSource = {
   // 模拟数据接口路径
   mockBaseUrl: ENV.VITE_BASE_MOCK_URL,
   // 服务端接口路径
-  serverUrl: ENV.VITE_BASE_SERVER_URL
+  serverUrl: ENV.VITE_BASE_SERVER_URL,
+  // github
+  github:'https://github.com/Neopo1itan/toolsdog'
 }
 
 /**

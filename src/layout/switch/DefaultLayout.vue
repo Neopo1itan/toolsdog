@@ -4,14 +4,24 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:21:44
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-20 17:16:12
+ * @LastEditTime: 2023-07-21 16:21:51
 -->
 <template>
     <div>
         <div class="default-layout">
             <a-layout class="min-h-[calc(100vh+48px)]">
                 <a-affix>
-                    <a-layout-header>Navbar</a-layout-header>
+                    <a-layout-header>
+                        <Navbar>
+                            <template #left>
+                                <Logo/>
+                            </template>
+                            <template #center></template>
+                            <template #right>
+                                <Github />
+                            </template>
+                        </Navbar>
+                    </a-layout-header>
                 </a-affix>
                 <a-layout-content>
                     <router-view v-slot="{Component}">
