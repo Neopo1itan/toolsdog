@@ -17,6 +17,7 @@
   "devDependencies": {
     "@arco-design/web-vue": "^2.48.1",
     "@iconify-json/ep": "^1.1.11",
+    "@iconify-json/material-symbols": "^1.1.52",
     "@iconify-json/mdi": "^1.1.53",
     "@iconify-json/ri": "^1.1.10",
     "@rushstack/eslint-patch": "^1.2.0",

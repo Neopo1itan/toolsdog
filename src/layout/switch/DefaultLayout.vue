@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:21:44
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-21 16:21:51
+ * @LastEditTime: 2023-07-25 17:04:24
 -->
 <template>
     <div>
@@ -16,7 +16,9 @@
                             <template #left>
                                 <Logo/>
                             </template>
-                            <template #center></template>
+                            <template #center>
+                                <Menu/>
+                            </template>
                             <template #right>
                                 <Github />
                             </template>
