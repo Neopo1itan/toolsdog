@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-25 16:10:30
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-25 17:30:28
+ * @LastEditTime: 2023-08-07 17:30:44
 -->
 <template>
   <a-menu
@@ -12,7 +12,7 @@
     auto-open-selected
     :selected-keys="selectedKeys"
     @menuItemClick="onClickMenuItem"
-    mode="horizonal"
+    mode="horizontal"
     :accordion="true"
     >
     <MenuItem v-for="menu of menuList" :key="menu.path" :menu="menu" />
@@ -29,6 +29,7 @@ const router = useRouter()
 //子菜单点击事件
 const onClickMenuItem = key =>{
     router.push(key)
+    // console.log(menuList.value)
 }
 const route = useRoute()
 //当前选中菜单

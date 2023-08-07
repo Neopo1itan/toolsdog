@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-18 16:20:55
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-20 16:25:39
+ * @LastEditTime: 2023-08-01 09:19:03
  */
 import { fileURLToPath, URL } from 'node:url'
 
@@ -43,7 +43,7 @@ export default defineConfig(({ mode }) => {
     base: viteEnv.VITE_BASE,
     server: {
       host: '0.0.0.0',
-      port: '8080',
+      port: '4040',
       open: true,
       strictPort: true
     },

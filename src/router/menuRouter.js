@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-25 14:57:11
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-25 16:09:44
+ * @LastEditTime: 2023-08-07 17:31:18
  */
 import IconMaterialSymbolsCodeBlocksOutline from '~icons/material-symbols/code-blocks-outline'
 export const menuRouter = [
@@ -38,10 +38,10 @@ export const menuRouter = [
 export const menuRouterFormat = (router,parentPath) => {
     return router.map(item=>{
         //拼接路由，'devtools' -> '/devtools' 'regular'->'devtools/regular'
-        item.path = parentPath ? `${parentPath}/&{item.path}` : `/${item.path}`
+        item.path = parentPath ? `${parentPath}/${item.path}` : `/${item.path}`
 
         //存爱children属性并且长度大于0开始递归
-        if(item.children && item.children.lengh >0){
+        if(item.children && item.children.length >0){
             item.children = menuRouterFormat(item.children,item.path)
         }
 

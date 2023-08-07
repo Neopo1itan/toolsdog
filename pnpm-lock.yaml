@@ -13,6 +13,7 @@ specifiers:
   '@unocss/preset-uno': ^0.53.5
   '@unocss/transformer-directives': ^0.53.5
   '@vitejs/plugin-vue': ^4.2.3
+  '@vue/compiler-sfc': ^3.3.4
   '@vue/eslint-config-prettier': ^7.1.0
   '@vue/eslint-config-typescript': ^11.0.3
   '@vue/tsconfig': ^0.4.0
@@ -51,6 +52,7 @@ devDependencies:
   '@unocss/preset-uno': 0.53.5
   '@unocss/transformer-directives': 0.53.5
   '@vitejs/plugin-vue': 4.2.3_vite@4.4.4+vue@3.3.4
+  '@vue/compiler-sfc': 3.3.4
   '@vue/eslint-config-prettier': 7.1.0_b4v36h7ir3aic3gcwqlvhl4gi4
   '@vue/eslint-config-typescript': 11.0.3_chjhzix47uqdxny4xjl7acg4ha
   '@vue/tsconfig': 0.4.0
@@ -61,7 +63,7 @@ devDependencies:
   typescript: 5.0.4
   unocss: 0.53.5_vite@4.4.4
   unplugin-auto-import: 0.16.6_@vueuse+core@10.2.1
-  unplugin-icons: 0.16.5
+  unplugin-icons: 0.16.5_@vue+compiler-sfc@3.3.4
   unplugin-vue-components: 0.25.1_vue@3.3.4
   vite: 4.4.4_@types+node@18.16.19
   vue-tsc: 1.8.5_typescript@5.0.4
@@ -2974,7 +2976,7 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-icons/0.16.5:
+  /unplugin-icons/0.16.5_@vue+compiler-sfc@3.3.4:
     resolution: {integrity: sha512-laCCqMWfng1XZgB9yowGfjBdDhtmz8t8zVnhzRNEMhBNdy26QrVewVmdXk/zsiAQYnEWvIxTjvW1nQXrxdd2+w==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
@@ -2997,6 +2999,7 @@ packages:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.5
       '@iconify/utils': 2.1.7
+      '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
       kolorist: 1.8.0
       local-pkg: 0.4.3
