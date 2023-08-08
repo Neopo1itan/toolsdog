@@ -2,7 +2,7 @@
  * @LastEditors: 雷宇琦
  * @Description: 全局config配置文件
  * @Date: 2022-09-17 14:35:02
- * @LastEditTime: 2023-07-21 16:21:19
+ * @LastEditTime: 2023-08-08 10:23:43
  * @Author: isboyjc
  */
 
@@ -28,7 +28,15 @@ const configSource = {
   // 服务端接口路径
   serverUrl: ENV.VITE_BASE_SERVER_URL,
   // github
-  github:'https://github.com/Neopo1itan/toolsdog'
+  github:'https://github.com/Neopo1itan/toolsdog',
+
+  //个人配置
+  me:{
+    name:'youyan',
+    gzhName:'youyan toolsdog',
+    gzhUrl:'xxx',
+    github:'https://github.com/Neopo1itan/toolsdog'
+  }
 }
 
 /**
@@ -95,5 +103,4 @@ const getConfig = key => {
   }
   return { ...config }
 }
-
 export { getConfig, setConfig, resetConfig }

@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:21:44
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-07-25 17:04:24
+ * @LastEditTime: 2023-08-08 10:24:51
 -->
 <template>
     <div>
@@ -30,7 +30,9 @@
                         <component :is="Component" />
                     </router-view>
                 </a-layout-content>
-                <a-layout-footer>Footer</a-layout-footer>
+                <a-layout-footer>
+                    <Footer></Footer>
+                </a-layout-footer>
             </a-layout>
         </div>
     </div>
