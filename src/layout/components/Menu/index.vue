@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-25 16:10:30
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-07 17:30:44
+ * @LastEditTime: 2023-08-14 15:16:42
 -->
 <template>
   <a-menu
@@ -12,7 +12,7 @@
     auto-open-selected
     :selected-keys="selectedKeys"
     @menuItemClick="onClickMenuItem"
-    mode="horizontal"
+    :mode="mode"
     :accordion="true"
     >
     <MenuItem v-for="menu of menuList" :key="menu.path" :menu="menu" />
@@ -20,9 +20,17 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
+import { computed, toRef } from "vue"
 import { useRoute } from "vue-router"
 import {menuRouterFormatList} from '@/router/menuRouter.js'
+
+const props = defineProps({
+    mode:{
+      type:String,
+      default:'horizontal'
+    }
+})
+const mode = toRef(props,'mode');
 //菜单数据
 const menuList = ref(menuRouterFormatList)
 const router = useRouter()
