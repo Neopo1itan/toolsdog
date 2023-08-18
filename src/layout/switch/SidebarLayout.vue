@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:22:28
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-14 15:24:56
+ * @LastEditTime: 2023-08-15 10:35:31
 -->
 <template>
     <div class="sidebar-layout">
@@ -49,8 +49,11 @@
 </template>
 
 <script>
-export default {
-
+import IconRiLayout5Fill from '~icons/ri/layout-5-fill'
+export default{
+    name:'SidebarLayout',
+    icon:IconRiLayout5Fill,
+    title:'边栏布局'
 }
 </script>
 
