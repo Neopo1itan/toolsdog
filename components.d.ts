@@ -9,6 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     AAffix: typeof import('@arco-design/web-vue')['Affix']
     AButton: typeof import('@arco-design/web-vue')['Button']
+    ADoption: typeof import('@arco-design/web-vue')['Doption']
+    ADropdown: typeof import('@arco-design/web-vue')['Dropdown']
     AImage: typeof import('@arco-design/web-vue')['Image']
     ALayout: typeof import('@arco-design/web-vue')['Layout']
     ALayoutContent: typeof import('@arco-design/web-vue')['LayoutContent']
@@ -29,6 +31,7 @@ declare module 'vue' {
     HomePage: typeof import('./src/views/HomePage.vue')['default']
     IconEpAlarmClock: typeof import('~icons/ep/alarm-clock')['default']
     IconHomeGreat: typeof import('~icons/home/great')['default']
+    IconMaterialSymbolsCheckSmall: typeof import('~icons/material-symbols/check-small')['default']
     IconMdiGithub: typeof import('~icons/mdi/github')['default']
     IconRiHammerFill: typeof import('~icons/ri/hammer-fill')['default']
     IconUserPresent: typeof import('~icons/user/present')['default']

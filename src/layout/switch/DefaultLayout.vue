@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:21:44
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-15 10:40:22
+ * @LastEditTime: 2023-08-21 10:52:34
 -->
 <template>
     <div>
@@ -20,6 +20,7 @@
                                 <Menu/>
                             </template>
                             <template #right>
+                                <SwitchLayout />
                                 <Github />
                             </template>
                         </Navbar>

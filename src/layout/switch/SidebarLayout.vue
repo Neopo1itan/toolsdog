@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:22:28
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-15 10:35:31
+ * @LastEditTime: 2023-08-21 10:53:16
 -->
 <template>
     <div class="sidebar-layout">
@@ -15,7 +15,10 @@
                     <Navbar>
                         <template #left><Logo /></template>
 
-                        <template #right><Github /></template>
+                        <template #right>
+                            <SwitchLayout />
+                            <Github />
+                        </template>
                     </Navbar>
                 </a-layout-header>
             </a-affix>
