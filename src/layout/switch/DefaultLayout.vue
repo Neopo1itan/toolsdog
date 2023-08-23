@@ -20,6 +20,7 @@
                                 <Menu/>
                             </template>
                             <template #right>
+                                <SwitchMode />
                                 <SwitchLayout />
                                 <Github />
                             </template>

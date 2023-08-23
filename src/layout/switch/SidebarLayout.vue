@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:22:28
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-21 10:53:16
+ * @LastEditTime: 2023-08-23 14:22:08
 -->
 <template>
     <div class="sidebar-layout">
@@ -16,6 +16,7 @@
                         <template #left><Logo /></template>
 
                         <template #right>
+                            <SwitchMode />
                             <SwitchLayout />
                             <Github />
                         </template>
