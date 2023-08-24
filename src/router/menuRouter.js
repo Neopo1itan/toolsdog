@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-25 14:57:11
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-07 17:31:18
+ * @LastEditTime: 2023-08-24 09:45:33
  */
 import IconMaterialSymbolsCodeBlocksOutline from '~icons/material-symbols/code-blocks-outline'
 export const menuRouter = [
@@ -23,7 +23,7 @@ export const menuRouter = [
                 meta:{
                     title:'正则在线校验'
                 },
-                component:()=>import('@/views/RegularPage.vue')
+                component:()=>import('@/views/RegularPage/index.vue')
             }
         ]
     }
