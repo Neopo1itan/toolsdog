@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:21:44
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-21 10:52:34
+ * @LastEditTime: 2023-08-28 16:42:26
 -->
 <template>
     <div>
@@ -29,7 +29,9 @@
                 </a-affix>
                 <a-layout-content>
                     <router-view v-slot="{Component}">
-                        <component :is="Component" />
+                        <transition name="fade-x">
+                            <component :is="Component" />
+                        </transition>
                     </router-view>
                 </a-layout-content>
                 <a-layout-footer>

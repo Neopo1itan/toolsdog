@@ -25,6 +25,7 @@ declare module 'vue' {
     AMenuItem: typeof import('@arco-design/web-vue')['MenuItem']
     APopover: typeof import('@arco-design/web-vue')['Popover']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
+    ATextarea: typeof import('@arco-design/web-vue')['Textarea']
     ATooltip: typeof import('@arco-design/web-vue')['Tooltip']
     ATrigger: typeof import('@arco-design/web-vue')['Trigger']
     DefaultLayout: typeof import('./src/layout/switch/DefaultLayout.vue')['default']

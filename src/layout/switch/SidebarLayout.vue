@@ -4,7 +4,7 @@
  * @Author: 雷宇琦
  * @Date: 2023-07-20 16:22:28
  * @LastEditors: 雷宇琦
- * @LastEditTime: 2023-08-23 14:22:08
+ * @LastEditTime: 2023-08-28 16:42:47
 -->
 <template>
     <div class="sidebar-layout">
@@ -41,7 +41,9 @@
                 <a-layout>
                     <a-layout-content class="min-h-[calc(100vh-58px)]">
                         <router-view v-slot="{ Component }">
-                            <component :is="Component" />
+                            <transition name="fade-x">
+                                <component :is="Component" />
+                            </transition>
                         </router-view>
                     </a-layout-content>
                     <a-layout-footer><Footer /></a-layout-footer>

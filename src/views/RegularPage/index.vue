@@ -3,12 +3,12 @@ import * as regPresetsObj from '@/utils/regexp.js'
 
 // 大小
 const size = ref('large')
+// 正则表达式对象
+const reg = ref(null)
 // 正则表达式字符串
 const regStr = ref('')
 // 正则表达式修饰符
 const regFlag = ref([])
-// 正则表达式对象
-const reg = ref(null)
 watchEffect(() => {
   try {
     reg.value = regStr.value
@@ -44,10 +44,34 @@ const regPresetSelect = r => {
   let selected = regPresets.value.find(v => v.value === r)
   if (selected) regFlag.value = selected.regexp.flags.split('')
 }
+
+// 待匹配字符串
+const matchStr = ref('')
+// 匹配结果
+const matchingResults = computed(
+  () => matchStr.value.match(reg.value)?.filter(v => v) || []
+)
+// 匹配结果格式化
+const matchingFormat = computed(() => {
+  let res = '',
+    str = matchStr.value
+  let n = 1
+  matchingResults.value.forEach(v => {
+    if (n > 4) n = 1
+    let matchStr = str.substr(0, v.length + str.indexOf(v))
+    str = str.substr(v.length + str.indexOf(v))
+    res += matchStr.replace(
+      v,
+      `<span class="matching matching${n}">${v}</span>`
+    )
+    n++
+  })
+
+  return res + str
+})
 </script>
 <template>
   <div class="max-w-1200px w-full p-20px box-border">
-    <!-- 上 -->
     <div class="flex justify-start items-center">
       <a-tooltip
         :content="`点击${auto ? '关闭' : '开启'}预设正则自动匹配`"
@@ -118,11 +142,52 @@ const regPresetSelect = r => {
         </template>
       </a-popover>
     </div>
-		
+
     <!-- 中 -->
     <div class="mt-20px bg-[var(--color-fill-2)]"></div>
-		
+
     <!-- 下 -->
-    <div class="w-full mt-20px"></div>
+    <div class="w-full mt-20px">
+      <a-textarea
+        v-model="matchStr"
+        default-value=""
+        placeholder="请输入要匹配的字符串"
+        :auto-size="{
+          minRows: 3,
+          maxRows: 6
+        }"
+      />
+
+      <div
+        class="w-full min-h-100px bg-[var(--color-fill-2)] whitespace-pre-wrap break-words indent-0 leading-22px mt-20px px-12px py-4px box-border"
+        v-html="matchingFormat || '无匹配结果'"
+      ></div>
+
+      <div
+        v-if="matchingResults.length > 0"
+        class="w-full min-h-100px bg-[var(--color-fill-2)] whitespace-pre-wrap break-words indent-0 leading-22px mt-20px px-12px py-4px box-border"
+      >
+        <div>共 {{ matchingResults.length }} 处匹配：</div>
+        <div v-for="(res, i) of matchingResults" :key="i">{{ res }}</div>
+      </div>
+    </div>
   </div>
 </template>
+
+<style>
+.matching {
+  @apply px-0px rounded-4px box-border;
+}
+.matching1 {
+  @apply bg-[rgb(var(--arcoblue-2))];
+}
+.matching2 {
+  @apply bg-[rgb(var(--green-2))];
+}
+.matching3 {
+  @apply bg-[rgb(var(--orange-2))];
+}
+.matching4 {
+  @apply bg-[rgb(var(--red-2))];
+}
+</style>
